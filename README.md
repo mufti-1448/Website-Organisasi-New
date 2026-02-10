@@ -23,19 +23,19 @@ The system supports **two main roles**: **Admin** and **Public User**.
 ---
 
 ## 📋 Daftar Isi
-- [Fitur Utama](#✨-fitur-utama--key-features)
-- [Tech Stack](#🛠️-tech-stack)
-- [Prerequisites](#📋-prerequisites)
-- [Instalasi](#🚀-instalasi)
-- [Menjalankan Aplikasi](#▶️-menjalankan-aplikasi)
-- [Testing](#🧪-testing)
-- [Screenshots](#📸-screenshots)
-- [Kontribusi](#🤝-kontribusi)
-- [Pengembang](#👨‍💻-pengembang)
+- [Fitur Utama](#fitur-utama--key-features)
+- [Tech Stack](#tech-stack)
+- [Prerequisites](#prerequisites)
+- [Instalasi](#instalasi)
+- [Menjalankan Aplikasi](#menjalankan-aplikasi)
+- [Testing](#testing)
+- [Screenshots](#screenshots)
+- [Kontribusi](#kontribusi)
+- [Pengembang](#pengembang)
 
-## ✨ Fitur Utama | Key Features
+## Fitur Utama | Key Features
 
-### 👨‍💼 Admin
+### Admin
 - Login & autentikasi admin
 - Dashboard admin
 - CRUD Anggota Organisasi
@@ -45,7 +45,7 @@ The system supports **two main roles**: **Admin** and **Public User**.
 - CRUD Evaluasi
 - Export laporan (PDF / Excel)
 
-### 👥 User (Publik)
+### User (Publik)
 - Melihat profil organisasi
 - Melihat anggota
 - Melihat rapat, program kerja, notulen, dan evaluasi
@@ -53,21 +53,21 @@ The system supports **two main roles**: **Admin** and **Public User**.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Backend**: Laravel 12
 - **Frontend**: Blade Template + Bootstrap 5
 - **Database**: SQLite
 - **Language**: PHP 8.2, HTML, CSS, JavaScript
 
 ---
-## 📋 Prerequisites
+## Prerequisites
 Sebelum menjalankan proyek ini, pastikan Anda memiliki:
 - **PHP** >= 8.2
 - **Composer** (untuk dependency management)
 - **Node.js** & **npm** (opsional, untuk frontend assets)
 - **Git** (untuk cloning repository)
 
-## 🚀 Instalasi
+## Instalasi
 
 ### 1. Clone Repository
 ```bash
@@ -108,7 +108,7 @@ php artisan key:generate
 php artisan migrate
 ```
 
-## ▶️ Menjalankan Aplikasi
+## Menjalankan Aplikasi
 ```bash
 php artisan serve
 ```
@@ -121,13 +121,13 @@ Untuk development dengan hot reload:
 npm run dev
 ```
 
-## 🧪 Testing
+## Testing
 Jalankan test suite dengan:
 ```bash
 php artisan test
 ```
 
-## 📸 Screenshots
+## Screenshots
 ## Dashboard User
 
 ![Dashboard User](docs/images/userdashboard.png)
@@ -137,7 +137,7 @@ php artisan test
 ![Dashboard Admin](docs/images/dashboardadmin.png)
 
 
-## 🤝 Kontribusi
+## Kontribusi
 Kontribusi sangat diterima! Silakan fork repository ini dan buat pull request untuk perubahan yang Anda usulkan.
 
 1. Fork proyek
@@ -146,7 +146,7 @@ Kontribusi sangat diterima! Silakan fork repository ini dan buat pull request un
 4. Push ke branch (`git push origin feature/AmazingFeature`)
 5. Buat Pull Request
 
-## 👨‍💻 Pengembang
+## Pengembang
 Dibuat oleh **M. Khafidhin Mufti Ali**  
 Jurusan **Rekayasa Perangkat Lunak (RPL)**  
 Sebagai tugas **Ujian Kompetensi Keahlian (UKK)** Tahun 2025-2026.
