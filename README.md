@@ -72,8 +72,8 @@ Sebelum menjalankan proyek ini, pastikan Anda memiliki:
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/mufti-1448/Website-Organisasi.git
-cd Website-Organisasi
+git clone https://github.com/mufti-1448/Website-Organisasi-New.git
+cd Website-Organisasi/project
 ```
 
 ### 2. Install Dependencies
@@ -129,7 +129,14 @@ php artisan test
 ```
 
 ## 📸 Screenshots
-*(Tambahkan screenshots aplikasi di sini)*
+## Dashboard User
+
+![Dashboard User](docs/images/userdashboard.png)
+
+## Dashboard Admin
+
+![Dashboard Admin](docs/images/dashboardadmin.png)
+
 
 ## 🤝 Kontribusi
 Kontribusi sangat diterima! Silakan fork repository ini dan buat pull request untuk perubahan yang Anda usulkan.
@@ -139,9 +146,6 @@ Kontribusi sangat diterima! Silakan fork repository ini dan buat pull request un
 3. Commit perubahan (`git commit -m 'Add some AmazingFeature'`)
 4. Push ke branch (`git push origin feature/AmazingFeature`)
 5. Buat Pull Request
-
-## 📄 Lisensi
-Proyek ini menggunakan lisensi MIT. Lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
 
 ## 👨‍💻 Pengembang
 Dibuat oleh **M. Khafidhin Mufti Ali**  

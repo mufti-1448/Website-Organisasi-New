@@ -1,0 +1,2 @@
+- [x] Update cd command in installation section to cd Website-Organisasi/project
+- [x] Remove the License badge from the header
