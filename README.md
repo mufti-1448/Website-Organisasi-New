@@ -23,16 +23,15 @@ The system supports **two main roles**: **Admin** and **Public User**.
 ---
 
 ## 📋 Daftar Isi
-- [Fitur Utama](#-fitur-utama)
-- [Tech Stack](#-tech-stack)
-- [Prerequisites](#-prerequisites)
-- [Instalasi](#-instalasi)
-- [Menjalankan Aplikasi](#-menjalankan-aplikasi)
-- [Testing](#-testing)
-- [Screenshots](#-screenshots)
-- [Kontribusi](#-kontribusi)
-- [Lisensi](#-lisensi)
-- [Pengembang](#-pengembang)
+- [Fitur Utama](#✨-fitur-utama--key-features)
+- [Tech Stack](#🛠️-tech-stack)
+- [Prerequisites](#📋-prerequisites)
+- [Instalasi](#🚀-instalasi)
+- [Menjalankan Aplikasi](#▶️-menjalankan-aplikasi)
+- [Testing](#🧪-testing)
+- [Screenshots](#📸-screenshots)
+- [Kontribusi](#🤝-kontribusi)
+- [Pengembang](#👨‍💻-pengembang)
 
 ## ✨ Fitur Utama | Key Features
 
