@@ -70,7 +70,7 @@
     </style>
 
     <section class="hero-section text-white py-5">
-        
+
         <div class="container text-center py-5">
             <h1 class="fw-bold mb-3">Tentang Kami</h1>
             <p class="lead">Kenali Lebih Dekat Organisasi Dewan Ambalan</p>
@@ -119,7 +119,7 @@
                 <div class="section-line mx-auto mb-5"></div>
 
                 <div class="row g-4 justify-content-center">
-                    @foreach ($anggota as $item)
+                    @forelse ($anggota as $item)
                         <div class="col-12 col-sm-6 col-md-3 ">
                             <div class="org-card text-center shadow-lg p-4">
                                 <div class="org-photo mx-auto">
@@ -134,8 +134,16 @@
                                 <small class="text-primary">{{ $item->jabatan }}</small>
                             </div>
                         </div>
-                    @endforeach
-                </div>
-        </div>
-    </section>
-@endsection
+                        @empty
+                            <div class="col-12">
+                                <div class="text-center py-5">
+                                    <i class="bi bi-emoji-frown display-1 text-muted"></i>
+                                    <h5 class="text-muted mt-3">Belum ada anggota</h5>
+                                    <p class="text-muted"> Struktur Organisasi akan muncul di sini setelah ditambahkan oleh admin.</p>
+                                </div>
+                            </div>
+                        @endforelse
+                    </div>
+            </div>
+        </section>
+    @endsection
