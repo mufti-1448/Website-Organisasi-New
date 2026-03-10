@@ -199,6 +199,10 @@
                                         <small class="text-success">
                                             Selesai
                                         </small>
+                                    @elseif (\Carbon\Carbon::parse($rapat->tanggal)->isToday())
+                                        <small class="text-warning">
+                                            Berlangsung
+                                        </small>                                      
                                     @else
                                         <small class="text-warning">
                                             Mendatang
@@ -230,8 +234,8 @@
                                             Berlangsung
                                         </small>
                                     @else
-                                        <small class="text-secondary">
-                                            Belum
+                                        <small class="text-warning">
+                                            Mendatang
                                         </small>
                                     @endif
                                 </p>
