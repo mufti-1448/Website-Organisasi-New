@@ -26,19 +26,18 @@
         .profile-avatar {
             width: 120px;
             height: 120px;
-            background: linear-gradient(135deg, #0d6efd, #6610f2);
             border-radius: 50%;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
-            box-shadow: 0 8px 25px rgba(13, 110, 253, 0.3);
             border: 4px solid #fff;
         }
 
         .profile-avatar i {
-            font-size: 3.5rem;
-            color: #fff;
+            font-size: 80px;
+            color: gray;
         }
 
         .profile-name {
@@ -62,13 +61,6 @@
             padding: 10px 20px;
             font-weight: 600;
             color: #fff;
-            transition: all 0.3s ease;
-        }
-
-        .btn-logout:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
-            background: linear-gradient(135deg, #c82333, #a02622);
         }
 
         /* Right info section */
@@ -122,9 +114,7 @@
             border-radius: 20px;
             font-weight: 600;
         }
-
-
-
+        
         @media (max-width: 991px) {
             .profile-sidebar {
                 border-right: none;
@@ -158,10 +148,12 @@
                 <div class="col-lg-4 profile-sidebar">
                     <div class="profile-avatar">
                         @if ($user->photo)
-                            <img src="{{ asset($user->photo) }}" alt="Profile Photo"
-                                class="w-100 h-100 rounded-circle object-fit-cover">
+                            <img src="{{ asset($user->photo) }}" class="w-100 h-100 rounded-circle object-fit-cover"
+                                alt="Foto Profil"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <i class="bi bi-person-circle" style="display:none;"></i>
                         @else
-                            <i class="bi bi-person-fill"></i>
+                            <i class="bi bi-person-circle"></i>
                         @endif
                     </div>
                     <h4 class="profile-name">{{ $user['name'] ?? 'Administrator' }}</h4>
@@ -194,24 +186,6 @@
                                 <span class="info-label">Terakhir Login</span>
                                 <span
                                     class="info-value">{{ $user['updated_at'] ? $user['updated_at']->format('d M Y, H:i') : '-' }}</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="info-section">
-                        <h5><i class="bi bi-shield-check"></i>Status Akun</h5>
-                        <ul class="info-list">
-                            <li>
-                                <span class="info-label">Status</span>
-                                <span class="info-value">
-                                    <span class="badge bg-success badge-status">
-                                        <i class="bi bi-check-circle-fill me-1"></i>Aktif
-                                    </span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="info-label">Role</span>
-                                <span class="info-value">Administrator</span>
                             </li>
                         </ul>
                     </div>
