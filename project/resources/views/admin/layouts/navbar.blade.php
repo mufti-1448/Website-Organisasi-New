@@ -1,6 +1,5 @@
 <nav class="navbar navbar-dark bg-dark sticky-top shadow-sm">
     <div class="container-fluid">
-        {{-- Brand / Logo --}}
         <div class="d-flex align-items-center">
             <button class="btn btn-outline-light me-3 d-md-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
@@ -12,7 +11,6 @@
             </a>
         </div>
 
-        {{-- User Dropdown --}}
         <div class="dropdown">
             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                 id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">

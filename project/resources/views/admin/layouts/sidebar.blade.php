@@ -7,7 +7,6 @@
     style="top: 56px; height: calc(100vh - 56px); z-index: 1030;">
     <div class="pt-3 h-100 d-flex flex-column">
 
-        {{-- Menu Utama --}}
         <ul class="nav flex-column flex-grow-1 overflow-y-auto">
             <li class="nav-item">
                 <a href="{{ route('admin.dashboard') }}"

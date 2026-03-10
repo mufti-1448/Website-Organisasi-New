@@ -26,7 +26,6 @@
             </ul>
 
             <div class="tab-content mt-3">
-                <!-- Detail Program -->
                 <div class="tab-pane fade show active" id="detail">
                     <div class="mb-3">
                         <label class="form-label">ID Program</label>
@@ -74,7 +73,6 @@
                     </div>
                 </div>
 
-                <!-- Notulen -->
                 <div class="tab-pane fade" id="notulen">
                     <div class="mb-3">
                         <label class="form-label">Pilih Notulen</label>
@@ -91,7 +89,6 @@
                     </div>
                 </div>
 
-                <!-- Evaluasi -->
                 <div class="tab-pane fade" id="evaluasi">
                     <div class="mb-3">
                         <label class="form-label">Pilih Evaluasi</label>

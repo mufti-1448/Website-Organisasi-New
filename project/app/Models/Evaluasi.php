@@ -17,17 +17,11 @@ class Evaluasi extends Model
 
     protected $fillable = ['id', 'program_id', 'judul', 'isi', 'tanggal', 'penulis', 'file'];
 
-    /**
-     * Relasi ke Program Kerja
-     */
     public function programKerja()
     {
         return $this->belongsTo(ProgramKerja::class, 'program_id');
     }
 
-    /**
-     * Relasi ke Anggota (Penulis)
-     */
     public function penulisRelation()
     {
         return $this->belongsTo(Anggota::class, 'penulis');

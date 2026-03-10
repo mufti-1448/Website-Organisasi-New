@@ -24,13 +24,11 @@ class ProgramKerja extends Model
         'progress',
     ];
 
-    // Relasi ke Anggota (penanggung jawab)
     public function penanggungJawab()
     {
         return $this->belongsTo(Anggota::class, 'penanggung_jawab_id');
     }
 
-    // Relasi ke Evaluasi
     public function evaluasi()
     {
         return $this->hasOne(Evaluasi::class, 'program_id');

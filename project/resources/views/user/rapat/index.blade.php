@@ -66,11 +66,9 @@
             font-weight: 700;
             color: #1a1a1a;
             text-align: left !important;
-            /* memastikan rata kiri */
             word-break: break-word;
             /* mencegah nabrak */
             white-space: normal;
-            /* biar bisa multi-line */
         }
 
 
@@ -97,7 +95,6 @@
 
         .rapat-info {
             color: #4a5568;
-            /* abu-abu */
             font-size: 0.95rem;
             margin-bottom: 6px;
             display: flex;
@@ -131,7 +128,6 @@
         }
     </style>
 
-    <!-- HERO -->
     <section class="hero-section">
         <div class="container">
             <h1 class="fw-bold mb-2">Rapat</h1>
@@ -201,19 +197,16 @@
                             </div>
 
 
-                            <!-- Tanggal -->
                             <p class="rapat-info">
                                 <i class="bi bi-calendar-event text-primary"></i>
                                 {{ \Carbon\Carbon::parse($data->tanggal)->translatedFormat('d F Y') }}
                             </p>
 
-                            <!-- Tempat -->
                             <p class="rapat-info">
                                 <i class="bi bi-geo-alt text-primary"></i>
                                 {{ $data->tempat }}
                             </p>
 
-                            <!-- Deskripsi (opsional jika ada) -->
                             @if ($data->deskripsi)
                                 <p class="rapat-info">
                                     <i class="bi bi-info-circle text-primary"></i>

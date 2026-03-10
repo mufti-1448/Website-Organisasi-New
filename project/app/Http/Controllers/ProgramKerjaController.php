@@ -29,7 +29,6 @@ class ProgramKerjaController extends Controller
         }
 
         $programKerja = $query->paginate(6)->appends(request()->query());
-        // Check if request is from admin or user
         if (request()->is('admin/*')) {
             return view('admin.program_kerja.index', compact('programKerja'));
         }
@@ -98,7 +97,6 @@ class ProgramKerjaController extends Controller
     public function show(string $id)
     {
         $program = ProgramKerja::with(['penanggungJawab', 'notulen.penulisRelation', 'evaluasi.penulisRelation'])->findOrFail($id);
-        // Check if request is from admin or user
         if (request()->is('admin/*')) {
             return view('admin.program_kerja.show', compact('program'));
         }
@@ -139,11 +137,9 @@ class ProgramKerjaController extends Controller
                 'status' => $request->status,
             ]);
 
-            // Reset semua relasi dulu
             Notulen::where('program_id', $program->id)->update(['program_id' => null]);
             Evaluasi::where('program_id', $program->id)->update(['program_id' => null]);
 
-            // Hubungkan ulang jika ada input
             if ($request->filled('notulen_id')) {
                 $notulen = Notulen::find($request->notulen_id);
                 $notulen->program_id = $program->id;
@@ -168,7 +164,6 @@ class ProgramKerjaController extends Controller
     {
         $program = ProgramKerja::findOrFail($id);
 
-        // Hapus file notulen dan evaluasi jika ada
         if ($program->notulen) {
             foreach ($program->notulen as $notulen) {
                 if ($notulen->file && file_exists(public_path('storage/notulen/' . $notulen->file))) {
@@ -185,7 +180,6 @@ class ProgramKerjaController extends Controller
             }
         }
 
-        // Set null relasi sebelum hapus
         Notulen::where('program_id', $program->id)->update(['program_id' => null]);
         Evaluasi::where('program_id', $program->id)->update(['program_id' => null]);
         $program->delete();

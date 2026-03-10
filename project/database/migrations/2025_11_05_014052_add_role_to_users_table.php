@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->boolean('is_admin')->default(false); // default bukan admin
-            $table->string('photo')->nullable(); // kolom untuk foto profil
+            $table->boolean('is_admin')->default(false);
+            $table->string('photo')->nullable();
         });
     }
 

@@ -121,7 +121,6 @@
                 </div>
             </section>
 
-            <!-- Results Info -->
             @if (request('search'))
                 <div class="text-center mb-3">
                     <small class="text-muted">
@@ -176,7 +175,6 @@ $jabatanClass = match (strtolower($item->jabatan)) {
                 @endforelse
             </div>
 
-            <!-- Pagination -->
             @if ($anggota->hasPages())
                 <div class="d-flex justify-content-center mt-4">
                     {{ $anggota->appends(request()->query())->links() }}

@@ -63,7 +63,6 @@
             color: #fff;
         }
 
-        /* Right info section */
         .info-section h5 {
             font-size: 1.1rem;
             font-weight: 700;
@@ -114,7 +113,7 @@
             border-radius: 20px;
             font-weight: 600;
         }
-        
+
         @media (max-width: 991px) {
             .profile-sidebar {
                 border-right: none;
@@ -144,7 +143,6 @@
         <div class="profile-wrapper">
             <div class="profile-card row g-4">
 
-                <!-- Sidebar -->
                 <div class="col-lg-4 profile-sidebar">
                     <div class="profile-avatar">
                         @if ($user->photo)
@@ -167,7 +165,6 @@
                     </form>
                 </div>
 
-                <!-- Main Content -->
                 <div class="col-lg-8">
 
                     <div class="info-section mb-4">
@@ -190,7 +187,6 @@
                         </ul>
                     </div>
 
-                    <!-- Edit Profile Button -->
                     <div class="mt-4">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                             data-bs-target="#editProfileModal">
@@ -204,7 +200,6 @@
         </div>
     </div>
 
-    <!-- Edit Profile Modal -->
     <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">

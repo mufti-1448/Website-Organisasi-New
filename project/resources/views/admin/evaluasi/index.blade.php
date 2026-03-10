@@ -4,15 +4,12 @@
 
 @section('content')
     <style>
-        /* Card Styling */
         .card-custom {
             border: none;
             border-radius: 12px;
             background: #ffffff;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
         }
-
-        /* Table Design */
         .table thead {
             background: #f7faff;
             border-bottom: 2px solid #e1e7ef;
@@ -28,18 +25,15 @@
             vertical-align: middle;
         }
 
-        /* Actions button group */
         .btn-action {
             gap: 5px;
         }
 
-        /* Search input styling */
         .dataTables_filter input {
             border-radius: 8px !important;
             padding: 6px 10px;
         }
 
-        /* Pagination styling */
         .dataTables_wrapper .dataTables_paginate .paginate_button {
             padding: 5px 12px !important;
             border-radius: 8px !important;
@@ -113,29 +107,22 @@
                                     @endif
                                 </td>
                                 <td class="text-center btn-action">
-                                    {{-- <button class="btn btn-sm btn-info" data-bs-toggle="modal"
-                                        data-bs-target="#showModal{{ $item->id }}">
-                                        <i class="bi bi-eye"></i>
-                                    </button> --}}
                                     <a href="{{ route('admin.evaluasi.show', $item->id) }}" class="btn btn-sm btn-info">
                                         <i class="bi bi-eye"></i>
                                     </a>
                                     <a href="{{ route('admin.evaluasi.edit', $item->id) }}" class="btn btn-sm btn-warning">
                                         <i class="bi bi-pencil"></i>
                                     </a>
-                                    <!-- Tombol Hapus -->
                                     <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal"
                                         data-bs-target="#modalDelete{{ $item->id }}">
                                         <i class="bi bi-trash"></i>
                                     </button>
 
-                                    <!-- Modal Konfirmasi Hapus -->
                                     <div class="modal fade" id="modalDelete{{ $item->id }}" tabindex="-1"
                                         aria-labelledby="modalDeleteLabel{{ $item->id }}" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered">
                                             <div class="modal-content border-0 shadow-sm">
 
-                                                <!-- Icon & Title Section -->
                                                 <div class="text-center pt-4 pb-2">
                                                     <i class="bi bi-trash3 text-danger" style="font-size: 3rem;"></i>
                                                     <h5 class="mt-3 fw-semibold">Hapus Data?</h5>
@@ -145,7 +132,6 @@
                                                     Data <strong>{{ $item->judul }}</strong> akan dihapus secara permanen.
                                                 </div>
 
-                                                <!-- Action Buttons -->
                                                 <div class="modal-footer border-0 justify-content-center pb-4 gap-2">
                                                     <button type="button" class="btn btn-light"
                                                         data-bs-dismiss="modal">Batal</button>
@@ -195,7 +181,6 @@
                 }
             });
         });
-        // Auto dismiss alert after 5 seconds (5000ms)
         setTimeout(function() {
             let alert = document.querySelector('.alert');
             if (alert) {

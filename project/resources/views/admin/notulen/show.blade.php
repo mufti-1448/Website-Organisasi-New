@@ -2,7 +2,6 @@
 
 @section('content')
     <style>
-        /* ===== Styling Basic ===== */
         .detail-container {
             background: #ffffff;
             padding: 25px;
@@ -11,7 +10,6 @@
             border: 1px solid #e9ecef;
         }
 
-        /* Tabs style */
         .nav-tabs .nav-link {
             border: none;
             color: #6c757d;
@@ -64,7 +62,6 @@
             font-weight: 600;
         }
 
-        /* Return button */
         .btn-secondary {
             border-radius: 8px;
         }
@@ -88,7 +85,6 @@
 
                 <div class="tab-content mt-3">
 
-                    {{-- Detail Notulen --}}
                     <div class="tab-pane fade show active" id="detail">
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -124,7 +120,6 @@
                         </div>
                     </div>
 
-                    {{-- File --}}
                     <div class="tab-pane fade" id="file">
                         @if ($notulen->file_path)
                             <div class="mb-3">

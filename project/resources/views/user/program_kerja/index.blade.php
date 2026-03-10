@@ -88,17 +88,14 @@
         .program-desc {
             font-size: 0.9rem;
             color: #6c757d;
-            /* Clamp to 4 lines for WebKit/Blink browsers */
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
             line-height: 1.4;
-            /* Use em-based max-height so it scales with font-size */
             max-height: calc(1.4em * 4);
             white-space: normal;
-            /* ensure wrapping */
             word-break: break-word;
             text-align: left !important;
 
@@ -117,7 +114,6 @@
         }
     </style>
 
-    <!-- HERO -->
     <section class="hero-section">
         <div class="container">
             <h1 class="fw-bold mb-2">Program Kerja</h1>
@@ -125,7 +121,6 @@
         </div>
     </section>
 
-    <!-- SEARCH -->
     <section class="py-4">
         <div class="container d-flex justify-content-center">
             <form action="{{ route('user.program_kerja.index') }}" method="GET" class="col-md-5">
@@ -143,7 +138,6 @@
         </div>
     </section>
 
-    <!-- Results Info -->
     @if (request('search'))
         <div class="text-center mb-3">
             <small class="text-muted">
@@ -153,7 +147,6 @@
         </div>
     @endif
 
-    <!-- CONTENT -->
     <section class="py-4">
         <div class="container text-center">
             <div class="row g-4 justify-content-center">
@@ -184,11 +177,7 @@
 
                                 <span class="badge-status {{ $statusClass }}">{{ $statusText }}</span>
                             </div>
-
-                            <!-- DESC -->
                             <p class="program-desc">{{ $data->deskripsi }}</p>
-
-                            <!-- AUTHOR -->
                             <p class="program-author mb-0 text-start text-truncate" style="max-width: 250px;">
                                 <i class="bi bi-person-fill"></i> {{ $data->penanggungJawab->nama ?? 'Tidak ada' }}
                             </p>

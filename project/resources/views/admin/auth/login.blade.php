@@ -237,7 +237,6 @@
             btnText.textContent = 'Memproses...';
         });
 
-        // Toggle password visibility
         document.getElementById('togglePassword').addEventListener('click', function() {
             const passwordInput = document.getElementById('password');
             const toggleIcon = this.querySelector('i');

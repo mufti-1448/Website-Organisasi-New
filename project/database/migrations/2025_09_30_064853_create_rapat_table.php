@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('rapat', function (Blueprint $table) {
-            $table->string('id')->primary(); // ID custom, misalnya RPT001
+            $table->string('id')->primary(); 
             $table->string('judul');
-            $table->string('nama')->nullable(); // Tambahkan kolom nama
+            $table->string('nama')->nullable();
             $table->date('tanggal');
             $table->time('waktu')->nullable();
             $table->string('tempat');

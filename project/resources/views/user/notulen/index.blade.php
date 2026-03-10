@@ -65,16 +65,12 @@
             font-weight: 700;
             color: #1a1a1a;
             text-align: left !important;
-            /* memastikan rata kiri */
             word-break: break-word;
-            /* mencegah nabrak */
             white-space: normal;
-            /* biar bisa multi-line */
         }
 
         .notulen-info {
             color: #4a5568;
-            /* abu-abu */
             font-size: 0.95rem;
             margin-bottom: 6px;
             display: flex;
@@ -102,20 +98,15 @@
         .notulen-desc {
             font-size: 0.9rem;
             color: #6c757d;
-            /* Clamp to 4 lines for WebKit/Blink browsers */
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
             line-height: 1.4;
-            /* Use em-based max-height so it scales with font-size */
             max-height: calc(1.4em * 4);
-            /* ensure wrapping */
             text-align: left !important;
-            /* memastikan rata kiri */
             word-break: break-word;
-            /* mencegah nabrak */
             white-space: normal;
         }
 
@@ -128,7 +119,6 @@
         }
     </style>
 
-    <!-- HERO -->
     <section class="hero-section">
         <div class="container">
             <h1 class="fw-bold mb-2">Notulen</h1>
@@ -181,7 +171,6 @@
                                 <i class="bi bi-person-circle text-primary"></i>
                                 {{ $data->penulis->nama }}
                             </p>
-                            <!-- Tanggal -->
                             <p class="notulen-info">
                                 <i class="bi bi-calendar-event text-primary"></i>
                                 {{ \Carbon\Carbon::parse($data->tanggal)->translatedFormat('d F Y') }}
@@ -191,7 +180,6 @@
                                 <i class="bi bi-people-fill text-primary"></i>
                                 {{ $data->judul }}
                             </p>
-                            <!-- Deskripsi (opsional jika ada) -->
                             <p class="notulen-desc">{{ $data->isi }}</p>
 
                         </div>

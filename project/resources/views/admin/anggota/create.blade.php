@@ -114,7 +114,6 @@
                     @enderror
                 </div>
 
-                <!-- Input Foto -->
                 <div class="mb-3">
                     <label for="foto" class="form-label">Foto</label>
                     <input type="file" class="form-control @error('foto') is-invalid @enderror" id="foto"
@@ -125,25 +124,21 @@
                     <div class="form-text text-muted">Upload foto anggota (opsional). Maksimal ukuran file 2MB.</div>
                 </div>
 
-                <!-- Modal File Terlalu Besar -->
                 <div class="modal fade" id="modalFileTooLarge" tabindex="-1" aria-labelledby="modalFileTooLargeLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content border-0 shadow-sm">
 
-                            <!-- Icon & Title Section -->
                             <div class="text-center pt-4 pb-2">
                                 <i class="bi bi-exclamation-triangle text-warning" style="font-size: 3rem;"></i>
                                 <h5 class="mt-3 fw-semibold">Ukuran File Terlalu Besar</h5>
                             </div>
 
-                            <!-- Body -->
                             <div class="modal-body text-center text-muted">
                                 File yang Anda unggah melebihi batas maksimal <strong>2MB</strong>.<br>
                                 Silakan pilih file lain dengan ukuran lebih kecil.
                             </div>
 
-                            <!-- Footer -->
                             <div class="modal-footer border-0 justify-content-center pb-4">
                                 <button type="button" class="btn btn-warning px-4 text-white"
                                     data-bs-dismiss="modal">Mengerti</button>
@@ -165,10 +160,10 @@
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('foto').addEventListener('change', function() {
                 const file = this.files[0];
-                if (file && file.size > 2097152) { // 2MB = 2 * 1024 * 1024 bytes
+                if (file && file.size > 2097152) { 
                     const modal = new bootstrap.Modal(document.getElementById('modalFileTooLarge'));
                     modal.show();
-                    this.value = ''; // reset input file biar gak ke-submit
+                    this.value = ''; 
                 }
             });
         });

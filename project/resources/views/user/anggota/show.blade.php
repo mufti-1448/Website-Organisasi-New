@@ -48,7 +48,6 @@
             font-size: 1.2rem;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .profile-img {
                 width: 110px;
@@ -84,14 +83,9 @@
                             <span class="badge bg-light text-primary px-3 py-2 fw-semibold">
                                 {{ $anggota->jabatan }}
                             </span>
-
                         </div>
-
-                        <!-- Detail -->
                         <div class="p-4">
-
                             <h5 class="fw-bold mb-3">Informasi Lengkap</h5>
-
                             <div class="info-item d-flex">
                                 <div class="info-icon"><i class="bi bi-mortarboard-fill"></i></div>
                                 <div>

@@ -4,7 +4,6 @@
 
 @section('content')
     <style>
-        /* Chart container to make canvas fill the area */
         .chart-container {
             position: relative;
             width: 100%;
@@ -18,7 +17,6 @@
 
         .stat-card {
             border: none;
-            /* hilangkan border default */
             border-left: 5px solid transparent;
             /* hanya di kiri */
             border-radius: 8px;
@@ -26,28 +24,23 @@
 
         .stat-card .card-body {
             min-height: 90px;
-            /* kamu bisa sesuaikan, misal 130px atau 150px */
         }
 
 
         .border-start-primary {
             border-left-color: #4e73df;
-            /* biru */
         }
 
         .border-start-success {
             border-left-color: #1cc88a;
-            /* hijau */
         }
 
         .border-start-warning {
             border-left-color: #f6c23e;
-            /* kuning */
         }
 
         .border-start-info {
             border-left-color: #36b9cc;
-            /* biru muda */
         }
 
         .lihat-data-link {
@@ -72,7 +65,6 @@
             </div>
         </div>
 
-        {{-- ======= Statistik Cards ======= --}}
         <div class="row g-3 mb-4">
             <div class="col-sm-6 col-md-3">
                 <div class="card stat-card border-start-primary shadow-sm">
@@ -155,7 +147,6 @@
             </div>
         </div>
 
-        <!-- Charts Row -->
         <div class="row">
             <div class="col-xl-8 col-lg-7 mb-4">
                 <div class="card shadow">
@@ -247,7 +238,6 @@
 
     @endsection
 
-    <!-- Chart.js -->
     <script src="{{ asset('js/chart.js') }}"></script>
     <script src="{{ asset('js/chartjs-plugin-datalabels.min.js') }}"></script>
     <script>
@@ -296,7 +286,7 @@
                         scales: {
                             y: {
                                 beginAtZero: true,
-                                grace: '10%', // Add 10% padding above the highest bar
+                                grace: '10%', 
                                 ticks: {
                                     callback: function(value) {
                                         return value;
@@ -307,7 +297,7 @@
                         responsive: true,
                         maintainAspectRatio: false
                     },
-                    plugins: [ChartDataLabels] // pastikan ini tidak error
+                    plugins: [ChartDataLabels]
                 });
             }
         });

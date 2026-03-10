@@ -11,10 +11,8 @@ class EvaluasiController extends Controller
 {
     public function index(request $request)
     {
-        // Build base query with eager loads (evaluasi uses programKerja and penulisRelation)
         $query = Evaluasi::with(['programKerja', 'penulisRelation']);
 
-        // Apply search filters when provided
         if ($request->filled('search')) {
             $search = $request->search;
             $query->where(function ($q) use ($search) {
@@ -30,10 +28,8 @@ class EvaluasiController extends Controller
             });
         }
 
-        // Finalize query with ordering and pagination
         $evaluasi = $query->orderBy('tanggal_evaluasi', 'desc')->paginate(6)->withQueryString();
 
-        // Check if request is from admin or user
         if (request()->is('admin/*')) {
             return view('admin.evaluasi.index', compact('evaluasi'));
         }
@@ -45,7 +41,6 @@ class EvaluasiController extends Controller
         $programs = ProgramKerja::whereDoesntHave('evaluasi')->get();
         $anggota = \App\Models\Anggota::all();
 
-        // Generate next ID
         $lastEvaluasi = Evaluasi::orderBy('id', 'desc')->first();
         if ($lastEvaluasi) {
             $lastId = intval(substr($lastEvaluasi->id, 4));
@@ -68,7 +63,6 @@ class EvaluasiController extends Controller
             'file' => 'nullable|mimes:pdf,doc,docx,jpg,png|max:2048',
         ]);
 
-        // Generate ID like notulen: EVAL001, EVAL002, etc.
         $lastEvaluasi = Evaluasi::orderBy('id', 'desc')->first();
         if ($lastEvaluasi) {
             $lastId = intval(substr($lastEvaluasi->id, 4));
@@ -108,7 +102,6 @@ class EvaluasiController extends Controller
     public function show(Evaluasi $evaluasi)
     {
         $evaluasi->load('penulisRelation');
-        // Check if request is from admin or user
         if (request()->is('admin/*')) {
             return view('admin.evaluasi.show', compact('evaluasi'));
         }
@@ -127,12 +120,10 @@ class EvaluasiController extends Controller
         ]);
 
         if ($request->hasFile('file')) {
-            // Hapus file lama jika ada
             if ($evaluasi->file) {
                 Storage::disk('public')->delete($evaluasi->file);
             }
 
-            // Upload file baru dengan format seperti anggota: timestamp_id_judul.jpg
             $judulSlug = str_replace(' ', '_', strtolower($request->judul));
             $ekstensi = $request->file('file')->getClientOriginalExtension();
             $fileName = time() . '_' . $evaluasi->id . '_' . $judulSlug . '.' . $ekstensi;
@@ -153,13 +144,10 @@ class EvaluasiController extends Controller
 
     public function destroy(Evaluasi $evaluasi)
     {
-        // Hapus file dari storage jika ada
         if ($evaluasi->file) {
             Storage::disk('public')->delete($evaluasi->file);
         }
-
         $evaluasi->delete();
-
         return redirect()->route('admin.evaluasi.index')->with('success', 'Evaluasi berhasil dihapus.');
     }
 }

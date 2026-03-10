@@ -65,11 +65,8 @@
             font-weight: 700;
             color: #1a1a1a;
             text-align: left !important;
-            /* memastikan rata kiri */
             word-break: break-word;
-            /* mencegah nabrak */
             white-space: normal;
-            /* biar bisa multi-line */
         }
 
         .evaluasi-info {
@@ -102,20 +99,15 @@
         .evaluasi-desc {
             font-size: 0.9rem;
             color: #6c757d;
-            /* Clamp to 4 lines for WebKit/Blink browsers */
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
             line-height: 1.4;
-            /* Use em-based max-height so it scales with font-size */
             max-height: calc(1.4em * 4);
-            /* ensure wrapping */
             text-align: left !important;
-            /* memastikan rata kiri */
             word-break: break-word;
-            /* mencegah nabrak */
             white-space: normal;
         }
 
@@ -128,7 +120,6 @@
         }
     </style>
 
-    <!-- HERO -->
     <section class="hero-section">
         <div class="container">
             <h1 class="fw-bold mb-2">Evaluasi</h1>

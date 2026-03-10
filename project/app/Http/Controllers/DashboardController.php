@@ -12,16 +12,13 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        // Hitungan ringkasan
         $totalAnggota = Anggota::count();
         $totalRapat = Rapat::count();
         $totalProgram = ProgramKerja::count();
         $totalEvaluasi = Evaluasi::count();
 
-        // Data untuk chart bulanan
         $monthlyData = $this->getMonthlyData();
 
-        // Item terbaru: 1 bulan yang lalu dan 2 bulan yang akan datang
         $now = now();
         $oneMonthAgo = $now->copy()->subMonth();
         $twoMonthsAhead = $now->copy()->addMonths(1);
@@ -49,7 +46,7 @@ class DashboardController extends Controller
 
     public function getMonthlyData()
     {
-        $currentYear = now()->year; // Dynamic to current year
+        $currentYear = now()->year;
         $months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
 
         $rapatData = [];

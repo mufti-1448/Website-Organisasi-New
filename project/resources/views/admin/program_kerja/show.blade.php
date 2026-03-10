@@ -2,7 +2,6 @@
 
 @section('content')
     <style>
-        /* ===== Styling Basic ===== */
         .detail-container {
             background: #ffffff;
             padding: 25px;
@@ -11,7 +10,6 @@
             border: 1px solid #e9ecef;
         }
 
-        /* Tabs style */
         .nav-tabs .nav-link {
             border: none;
             color: #6c757d;
@@ -45,7 +43,6 @@
             }
         }
 
-        /* Form style */
         .form-control,
         .form-select {
             background-color: #f8f9fa;
@@ -64,12 +61,10 @@
             font-weight: 600;
         }
 
-        /* Return button */
         .btn-secondary {
             border-radius: 8px;
         }
 
-        /* Image styling */
         .img-thumbnail {
             border-radius: 10px;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
@@ -98,7 +93,6 @@
                 </ul>
 
                 <div class="tab-content mt-3">
-                    {{-- Detail Program --}}
                     <div class="tab-pane fade show active" id="detail">
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -136,7 +130,6 @@
                         </div>
                     </div>
 
-                    {{-- Notulen --}}
                     <div class="tab-pane fade" id="notulen">
                         @if ($program->notulen)
                             <div class="mb-3">
@@ -165,10 +158,6 @@
                         @endif
                     </div>
 
-
-
-
-                    {{-- Evaluasi --}}
                     <div class="tab-pane fade" id="evaluasi">
                         @if ($program->evaluasi)
                             <div class="mb-3">

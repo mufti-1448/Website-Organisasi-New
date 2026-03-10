@@ -14,10 +14,8 @@ class NotulenController extends Controller
 {
     public function index(Request $request)
     {
-        // Build base query with eager loads
         $query = Notulen::with(['rapat', 'penulis']);
 
-        // Apply search filters when provided
         if ($request->filled('search')) {
             $search = $request->search;
             $query->where(function ($q) use ($search) {
@@ -33,9 +31,7 @@ class NotulenController extends Controller
             });
         }
 
-        // Finalize query with ordering and pagination
         $notulen = $query->orderBy('tanggal', 'desc')->paginate(6)->withQueryString();
-        // Check if request is from admin or user
         if (request()->is('admin/*')) {
             return view('admin.notulen.index', compact('notulen'));
         }
@@ -63,15 +59,11 @@ class NotulenController extends Controller
             'file' => 'nullable|mimes:pdf,docx,txt|max:2048',
         ]);
 
-        // Cek apakah rapat sudah memiliki notulen
         $existingNotulen = Notulen::where('rapat_id', $request->rapat_id)->first();
         if ($existingNotulen) {
             return back()->with('error', 'Rapat ini sudah memiliki notulen.')->withInput();
         }
-
-        // Generate ID otomatis seperti anggota
         $id = 'NTL' . str_pad(Notulen::count() + 1, 3, '0', STR_PAD_LEFT);
-
         $filePath = null;
         if ($request->hasFile('file')) {
             $judul = Str::slug($request->judul);
@@ -98,7 +90,6 @@ class NotulenController extends Controller
     public function show(string $id)
     {
         $notulen = Notulen::with(['rapat', 'penulis'])->findOrFail($id);
-        // Check if request is from admin or user
         if (request()->is('admin/*')) {
             return view('admin.notulen.show', compact('notulen'));
         }
@@ -127,7 +118,6 @@ class NotulenController extends Controller
             'file' => 'nullable|mimes:pdf,docx,txt|max:2048',
         ]);
 
-        // Cek apakah rapat sudah memiliki notulen lain
         $existingNotulen = Notulen::where('rapat_id', $request->rapat_id)->where('id', '!=', $id)->first();
         if ($existingNotulen) {
             return back()->with('error', 'Rapat ini sudah memiliki notulen.');

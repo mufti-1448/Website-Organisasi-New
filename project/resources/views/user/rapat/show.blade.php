@@ -58,7 +58,6 @@
             text-decoration: none;
         }
 
-        /* Tabs style */
         .nav-tabs .nav-link {
             border: none;
             color: #6c757d;
@@ -92,7 +91,6 @@
             }
         }
 
-        /* Form style */
         .form-control,
         .form-select {
             background-color: #f8f9fa;
@@ -124,7 +122,6 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="detail-card">
-                        <!-- Tabs -->
                         <ul class="nav nav-tabs" id="rapatTab" role="tablist">
                             <li class="nav-item">
                                 <button class="nav-link active" id="detail-tab" data-bs-toggle="tab"
@@ -137,7 +134,6 @@
                         </ul>
 
                         <div class="tab-content mt-3">
-                            {{-- Detail rapat --}}
                             <div class="tab-pane fade show active" id="detail">
                                 <div class="row g-3">
                                     <div class="col-md-6">
@@ -172,7 +168,6 @@
                                 </div>
                             </div>
 
-                            {{-- Notulen --}}
                             <div class="tab-pane fade" id="notulen">
                                 @if ($rapat->notulen)
                                     <div class="mb-3">

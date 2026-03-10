@@ -4,12 +4,10 @@
 
 @section('content')
     <section class="hero position-relative">
-        {{-- Background gambar --}}
         <div class="hero-bg"
             style="background: linear-gradient(rgba(26, 42, 75, 0.65), rgba(47, 65, 101, 0.65)), url('{{ asset('images/herosection/hero2.jpg') }}') center/cover no-repeat; height: 70vh;">
         </div>
 
-        {{-- Konten teks di kiri --}}
         <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
             <div class="container text-white">
                 <div class="col-lg-6 col-md-8">
@@ -33,11 +31,9 @@
         </div>
     </section>
 
-    {{-- Section Profil Organisasi --}}
     <section class="py-5 bg-white">
         <div class="container">
             <div class="row align-items-center">
-                {{-- Kolom kiri (teks) --}}
                 <div class="col-md-6 mb-4 mb-md-0">
                     <h3 class="fw-bold mb-4">Profil Organisasi</h2>
 
@@ -64,7 +60,6 @@
                     </ul>
                 </div>
 
-                {{-- Kolom kanan (gambar) --}}
                 <div class="col-md-6 text-center">
                     <img src="{{ asset('images/herosection/hero2.jpg') }}" alt="Profil Organisasi"
                         class="img-fluid rounded-4 shadow-sm" style="max-width: 90%; height: auto;">

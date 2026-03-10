@@ -6,45 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Sistem Organisasi Sekolah')</title>
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
 
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="{{ asset('bootstrap-icons/bootstrap-icons.css') }}">
 
-    <!-- DataTables CSS -->
     <link rel="stylesheet" href="{{ asset('data-tabels/datatables.min.css') }}">
 
     <link rel="icon" type="image/png" href="{{ asset('images/icon/favicon2.jpg') }}">
 
-    <!-- jQuery (diperlukan untuk DataTables) -->
     <script src="{{ asset('js/jquery-3.7.1.min.js') }}"></script>
 
     <style>
-        /* Font umum untuk seluruh halaman */
         body {
             font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             font-size: 0.95rem;
             color: #212529;
-            /* Warna teks normal */
             background-color: #f8f9fa;
-            /* Background seperti semula */
         }
 
-        /* Navbar style */
         .navbar {
             font-family: "Segoe UI Semibold", "Segoe UI", Roboto, sans-serif;
             font-weight: 600;
             letter-spacing: 0.3px;
         }
 
-        /* Sidebar style */
         #sidebarMenu {
             font-family: "Segoe UI Semibold", "Segoe UI", Roboto, sans-serif;
             font-weight: 600;
             font-size: 0.92rem;
             background-color: #1e1e1e;
-            /* warna lebih gelap dari navbar */
             color: #ccc;
             min-height: 100vh;
         }
@@ -62,13 +52,11 @@
             color: #fff;
         }
 
-        /* Navbar brand */
         .navbar-brand {
             font-size: 1.25rem;
             font-weight: 600;
         }
 
-        /* Dropdown user di navbar */
         .dropdown-menu-dark {
             background-color: #1e1e1e;
         }
@@ -77,7 +65,6 @@
             padding: 20px;
         }
 
-        /* Page Header Styles */
         .page-title {
             font-size: 24px;
             font-weight: 700;
@@ -107,15 +94,12 @@
 
 <body>
 
-    {{-- Navbar --}}
     @include('admin.layouts.navbar')
 
     <div class="container-fluid">
         <div class="row">
-            {{-- Sidebar --}}
             @include('admin.layouts.sidebar')
 
-            {{-- Konten Halaman --}}
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 content-wrapper">
                 @yield('content')
 
@@ -129,13 +113,10 @@
         </div>
     </div>
 
-    {{-- Bootstrap JS (offline) --}}
     <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-    {{-- DataTables JS --}}
     <script src="{{ asset('data-tabels/datatables.min.js') }}"></script>
 
-    {{-- Additional Scripts --}}
     @yield('scripts')
 </body>
 

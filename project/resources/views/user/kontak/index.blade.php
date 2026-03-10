@@ -74,13 +74,11 @@
 
 <div class="container py-4">
 
-    <!-- Header -->
     <div class="contact-hero">
         <h1>Kontak Kami</h1>
         <p>Butuh bantuan atau ingin berkolaborasi? Hubungi kami melalui kontak di bawah.</p>
     </div>
 
-    <!-- Card -->
     <div class="contact-card mx-auto" style="max-width: 650px;">
 
         <h5 class="mb-3">Informasi Kantor</h5>
@@ -114,7 +112,6 @@
 
         <hr class="my-4">
 
-        <!-- Social Media -->
         <div class="d-flex align-items-center">
             <span class="me-3">Ikuti kami:</span>
             <div class="social">

@@ -20,7 +20,6 @@
             </ul>
 
             <div class="tab-content mt-3">
-                <!-- Detail Rapat -->
                 <div class="tab-pane fade show active" id="detail">
                     <div class="mb-3">
                         <label class="form-label">ID Rapat</label>
@@ -53,7 +52,6 @@
                     </div>
                 </div>
 
-                <!-- Notulen -->
                 <div class="tab-pane fade" id="notulen">
                     <div class="mb-3">
                         <label class="form-label">Pilih Notulen</label>
@@ -69,8 +67,6 @@
                         </select>
                     </div>
                 </div>
-
-
 
             </div>
 
